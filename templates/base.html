@@ -1,134 +1,130 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
-  <!-- [Head] start -->
+<html lang="pt-br">
+    <head>
+        <title>Home | Light Able Admin & Dashboard Template</title>
+        <!-- [Meta] -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="description"
+          content="Light Able admin and dashboard template offer a variety of UI elements and pages, ensuring your admin panel is both fast and effective."
+        />
+        <meta name="author" content="phoenixcoded" />
 
-  <head>
-    <title>Home | Light Able Admin & Dashboard Template</title>
-    <!-- [Meta] -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Light Able admin and dashboard template offer a variety of UI elements and pages, ensuring your admin panel is both fast and effective."
-    />
-    <meta name="author" content="phoenixcoded" />
+        <!-- [Favicon] icon -->
+        <link rel="icon" href="{% static "/assets/images/favicon.svg" %}" type="image/x-icon" />
 
-    <!-- [Favicon] icon -->
-    <link rel="icon" href="{% static "/assets/images/favicon.svg" %}" type="image/x-icon" />
+        <!-- map-vector css -->
+        <link rel="stylesheet" href="{% static "/assets/css/plugins/jsvectormap.min.css" %}">
+        <!-- [Google Font : Public Sans] icon -->
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- map-vector css -->
-    <link rel="stylesheet" href="{% static "/assets/css/plugins/jsvectormap.min.css" %}">
-    <!-- [Google Font : Public Sans] icon -->
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- [Tabler Icons] https://tablericons.com -->
-    <link rel="stylesheet" href="{% static "/assets/fonts/tabler-icons.min.css" %}" >
-    <!-- [Feather Icons] https://feathericons.com -->
-    <link rel="stylesheet" href="{% static "/assets/fonts/feather.css" %}" >
-    <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
-    <link rel="stylesheet" href="{% static "/assets/fonts/fontawesome.css" %}" >
-    <!-- [Material Icons] https://fonts.google.com/icons -->
-    <link rel="stylesheet" href="{% static "/assets/fonts/material.css" %}" >
-    <!-- [Template CSS Files] -->
-    <link rel="stylesheet" href="{% static "/assets/css/style.css" %}" id="main-style-link" >
-    <link rel="stylesheet" href="{% static "/assets/css/style-preset.css" %}" >
-
-  </head>
-  <!-- [Head] end -->
-  <!-- [Body] Start -->
-
-  <body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
-    <!-- [ Pre-loader ] start -->
-<div class="loader-bg">
-  <div class="loader-track">
-    <div class="loader-fill"></div>
-  </div>
-</div>
-<!-- [ Pre-loader ] End -->
- <!-- [ Sidebar Menu ] start -->
-<nav class="pc-sidebar">
-  <div class="navbar-wrapper">
-    <div class="m-header">
-      <a href="../dashboard/index.html" class="b-brand text-primary">
-        <!-- ========   Change your logo from here   ============ -->
-        <img src="../assets/images/logo-dark.svg" alt="logo image" class="logo-lg" />
-        <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version">v1.0</span>
-      </a>
-    </div>
-    <div class="navbar-content">
-      <ul class="pc-navbar">
-        <li class="pc-item pc-caption">
-          
-        </li>
-
-        <li class="pc-item">
-          <a href="../widget/w_statistics.html" class="pc-link">
-            <span class="pc-micon">
-              <i class="ph-duotone ph-projector-screen-chart"></i>
-            </span>
-            <span class="pc-mtext">Dashboard</span>
-          </a>
-        </li>
-
-        <br>
+        <!-- [Tabler Icons] https://tablericons.com -->
+        <link rel="stylesheet" href="{% static "/assets/fonts/tabler-icons.min.css" %}" >
+        <!-- [Feather Icons] https://feathericons.com -->
+        <link rel="stylesheet" href="{% static "/assets/fonts/feather.css" %}" >
+        <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+        <link rel="stylesheet" href="{% static "/assets/fonts/fontawesome.css" %}" >
+        <!-- [Material Icons] https://fonts.google.com/icons -->
+        <link rel="stylesheet" href="{% static "/assets/fonts/material.css" %}" >
+        <!-- [Template CSS Files] -->
+        <link rel="stylesheet" href="{% static "/assets/css/style.css" %}" id="main-style-link" >
+        <link rel="stylesheet" href="{% static "/assets/css/style-preset.css" %}" >
+    </head>
+    <!-- [Head] end -->
+  
+  
+  
+    <!-- [Body] Start -->
+    <body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
+        <!-- [ Pre-loader ] start -->
+        <div class="loader-bg">
+            <div class="loader-track">
+              <div class="loader-fill"></div>
+            </div>
+        </div>
+        <!-- [ Pre-loader ] End -->
 
 
-        <li class="pc-item pc-hasmenu">
-          <a href="#!" class="pc-link">
-            <span class="pc-micon">
-              <i class="ph-duotone ph-gauge"></i>
-            </span>
-            <span class="pc-mtext">Turmas</span>
-            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+        <!-- [ Sidebar Menu ] start -->
+        <nav class="pc-sidebar">
+            <div class="navbar-wrapper">
+              <div class="m-header">
+                <a href="../dashboard/index.html" class="b-brand text-primary">
+                  <!-- ========   Change your logo from here   ============ -->
+                  <img src="../assets/images/logo-dark.svg" alt="logo image" class="logo-lg" />
+                  <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version">v1.0</span>
+                </a>
+              </div>
+            <div class="navbar-content">
+              <ul class="pc-navbar">
+                <li class="pc-item pc-caption">
+                  
+                </li>
+
+                <li class="pc-item">
+                  <a href="../widget/w_statistics.html" class="pc-link">
+                    <span class="pc-micon">
+                      <i class="ph-duotone ph-projector-screen-chart"></i>
+                    </span>
+                    <span class="pc-mtext">Dashboard</span>
+                  </a>
+                </li>
+                <br>
+
+                <li class="pc-item pc-hasmenu">
+                    <a href="#!" class="pc-link">
+                        <span class="pc-micon">
+                          <i class="ph-duotone ph-gauge"></i>
+                        </span>
+                        <span class="pc-mtext">Turmas</span>
+                        <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                    </a>
+                    <ul class="pc-submenu">
+                        <li class="pc-item"><a class="pc-link" href="../dashboard/index.html">Listar</a></li>
+                        <li class="pc-item"><a class="pc-link" href="../dashboard/affiliate.html">Configurações</a></li>
+                    </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                    <a href="#!" class="pc-link">
+                      <span class="pc-micon"> <i class="ph-duotone ph-layout"></i></span><span class="pc-mtext">Alunos</span>
+                      <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                    </a>
+                    <ul class="pc-submenu">
+                        <li class="pc-item"><a class="pc-link" href="../demo/layout-horizontal.html">Listar</a></li>
+                        <li class="pc-item"><a class="pc-link" href="../demo/layout-vertical.html">Configurações</a></li>
+                    </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="#!" class="pc-link"
+                    ><span class="pc-micon"> <i class="ph-duotone ph-layout"></i></span><span class="pc-mtext">Ocorrências</span
+                    ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
+                  ></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="../demo/layout-horizontal.html">Registrar</a></li>
+                    <li class="pc-item"><a class="pc-link" href="../demo/layout-vertical.html">Listar</a></li>
+                    <li class="pc-item"><a class="pc-link" href="../demo/layout-vertical.html">Configurações</a></li>
+                    
+                  </ul>
+
+                </li>
+              </ul>
+            </div>
+
+
+
+
+
+
+
+
             
-          </a>
-          <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../dashboard/index.html">Listar</a></li>
-            <li class="pc-item"><a class="pc-link" href="../dashboard/affiliate.html">Configurações</a></li>
-            
-          </ul>
-        </li>
-        <li class="pc-item pc-hasmenu">
-          <a href="#!" class="pc-link"
-            ><span class="pc-micon"> <i class="ph-duotone ph-layout"></i></span><span class="pc-mtext">Alunos</span
-            ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
-          ></a>
-          <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../demo/layout-horizontal.html">Listar</a></li>
-            <li class="pc-item"><a class="pc-link" href="../demo/layout-vertical.html">Configurações</a></li>
-            
-          </ul>
-        </li>
-        <li class="pc-item pc-hasmenu">
-          <a href="#!" class="pc-link"
-            ><span class="pc-micon"> <i class="ph-duotone ph-layout"></i></span><span class="pc-mtext">Ocorrências</span
-            ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
-          ></a>
-          <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../demo/layout-horizontal.html">Registrar</a></li>
-            <li class="pc-item"><a class="pc-link" href="../demo/layout-vertical.html">Listar</a></li>
-            <li class="pc-item"><a class="pc-link" href="../demo/layout-vertical.html">Configurações</a></li>
-            
-          </ul>
-
-        </li>
-      </ul>
-    </div>
-
-
-
-
-
-
-
-
-    
-  </div>
-</nav>
-<!-- [ Sidebar Menu ] end -->
+          </div>
+        </nav>
+        <!-- [ Sidebar Menu ] end -->
  <!-- [ Header Topbar ] start -->
 <header class="pc-header">
   <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
