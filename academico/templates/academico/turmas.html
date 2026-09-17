@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block caminho_1 %} Turmas {% endblock %}
+{% block caminho_2 %} Listar {% endblock %}
+{% block titulo %} Listar Turmas {% endblock %}
+
+
+{% block conteudo %}
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead>
+                <th>
+                    <td> Código </td>
+                    <td> Descrição </td>
+                    <td> Ano Letivo </td>
+                    <td> Ações </td>
+                </th>
+            </thead>
+    
+            <tbody>
+                {% if context %}
+                    {% for turma in turmas %}
+                        <tr>
+                            <td> {{turma.codigo}} </td>
+                            <td> {{turma.descricao}} </td>
+                            <td> {{turma.ano_letivo}} </td>
+                            <td>  </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan=5 style="color: red"> Não existe turmas cadastradas </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+
+        </table>
+    </div>
+{% endblock conteudo %}
+

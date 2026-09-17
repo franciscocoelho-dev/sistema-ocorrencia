@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from .models import Turma
 
-# Create your views here.
+def listar_turma(request):
+    turmas = Turma.objects.all()
+    return render(
+        request,
+        'academico/turmas.html',
+        {'context' : turmas}
+    )
+
