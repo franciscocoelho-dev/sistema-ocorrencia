@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Turma
 from .forms import TurmaForm
 
@@ -10,9 +10,14 @@ def listar_turma(request):
         {'context' : turmas}
     )
 
-
 def adicionar_turma(request):
-    form = TurmaForm()
+    if request.method == 'GET':
+        form = TurmaForm()
+    else: # Então é POST
+        form = TurmaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(listar_turma)
     return render(
         request,
         'academico/add-turmas.html',

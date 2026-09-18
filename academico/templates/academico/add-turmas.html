@@ -7,5 +7,27 @@
 
 
 {% block conteudo %}
+    <form method="post">  
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-8">
+                {{form_turma.descricao.label}}
+                {{form_turma.descricao}}
+            </div>
+            
+            <div class="col-4">
+                {{form_turma.ano_letivo.label}}
+                {{form_turma.ano_letivo}}
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 mt-4">
+                <input type="submit" value="Cadastrar Turma" name="btn_cadastrar" class="btn btn-primary">
+
+                <a class="btn btn-secondary" href="{% url "listar-turma" %}"> Voltar </a>
+            </div>
+        </div>
+    </form>
 
 {% endblock  %}
