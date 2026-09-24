@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block caminho_1 %} Alunos {% endblock %}
+{% block caminho_2 %} Adicionar {% endblock %}
+{% block titulo %} Adicionar Alunos {% endblock %}
+
+
+{% block conteudo %}
+        <form action="">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-12">
+                    {{form_aluno.nome.label}}
+                    {{form_aluno.nome}}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-6">
+                    {{form_aluno.cpf.label}}
+                    {{form_aluno.cpf}}
+                </div>
+                <div class="col-6">
+                    {{form_aluno.ra.label}}
+                    {{form_aluno.ra}}
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-4">
+                    {{form_aluno.nome_responsavel.label}}
+                    {{form_aluno.nome_responsavel}}
+                </div>
+                <div class="col-4">
+                    {{form_aluno.telefone_responsavel.label}}
+                    {{form_aluno.telefone_responsavel}}
+                </div>
+                <div class="col-4">
+                    {{form_aluno.turma.label}}
+                    {{form_aluno.turma}}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

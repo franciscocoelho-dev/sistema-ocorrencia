@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Turma
-from .forms import TurmaForm
+from .models import Turma, Aluno
+from .forms import TurmaForm, AlunoForm
 
 def listar_turma(request):
     turmas = Turma.objects.all()
@@ -23,4 +23,24 @@ def adicionar_turma(request):
         'academico/add-turmas.html',
         {'form_turma': form}
     )
+
+
+def listar_alunos(request):
+    alunos = Aluno.objects.all()
+    return render(
+        request,
+        'academico/alunos.html',
+        {'context': alunos}
+    )
+
+def adicionar_alunos(request):
+    if request.method == 'GET':
+        form = AlunoForm()
+        return render(request, 'academico/add-aluno.html', {'form_aluno': form})
+    else:
+        # request.method == 'POST'
+        form = AlunoForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect(listar_alunos)
 

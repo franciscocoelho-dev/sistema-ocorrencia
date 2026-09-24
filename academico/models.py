@@ -26,10 +26,10 @@ class Turma(models.Model):
 class Aluno(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50)
-    cpf = models.CharField(max_length=11)
-    ra = models.CharField(max_length=11)
-    nome_responsavel = models.CharField(max_length=50)
-    telefone_responsavel = models.CharField(max_length=20)
+    cpf = models.CharField(max_length=11, verbose_name='CPF')
+    ra = models.CharField(max_length=11, verbose_name='R.A.')
+    nome_responsavel = models.CharField(max_length=50, verbose_name='Nome do Responsável')
+    telefone_responsavel = models.CharField(max_length=20, verbose_name='Telefone do Responsável')
     turma = models.ForeignKey(
         Turma,
         on_delete=models.PROTECT

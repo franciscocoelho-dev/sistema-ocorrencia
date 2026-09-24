@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block caminho_1 %} Alunos {% endblock %}
+{% block caminho_2 %} Listar {% endblock %}
+{% block titulo %} Listar Alunos {% endblock %}
+
+
+{% block conteudo %}
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> Código </th>
+                        <th> Nome </th>
+                        <th> CPF </th>
+                        <th> RA </th>
+                        <th> Ações </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% if context %}
+                        {% for aluno in context %}
+                            <tr>
+                                <td> {{aluno.id}} </td>
+                                <td> {{aluno.nome}} </td>
+                                <td> {{aluno.cpf}} </td>
+                                <td> {{aluno.ra}} </td>
+                                <td>
+                                    <a href="" class="btn btn-primary"> Visualizar </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                            <tr>
+                                <td colspan="5" > Não tem alunos cadastrados </td>
+                            </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
