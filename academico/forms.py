@@ -11,6 +11,13 @@ class TurmaForm(ModelForm):
             'descricao': forms.TextInput(attrs = {'class': 'form-control'}),
             'ano_letivo': forms.Select(attrs = {'class': 'form-control'}),
         }
+    
+    def clean_descricao(self):
+        descricao = self.cleaned_data.get('descricao', '').strip()
+        if len(descricao) < 6:
+            self.add_error('descricao', 'A descrição deve ter no mínimo 6 caracteres.')
+        return descricao
+
 
 class AlunoForm(ModelForm):
     class Meta:
@@ -24,3 +31,8 @@ class AlunoForm(ModelForm):
             'telefone_responsavel': forms.TextInput(attrs = {'class': 'form-control'}),
             'turma': forms.Select(attrs = {'class': 'form-control'}),
         }
+
+    
+
+
+

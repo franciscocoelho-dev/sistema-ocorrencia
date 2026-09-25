@@ -12,7 +12,7 @@ class AnoLetivo(models.Model):
 
 class Turma(models.Model):
     id = models.AutoField(primary_key=True)
-    descricao = models.CharField(max_length=75)
+    descricao = models.CharField(max_length=75, verbose_name='Descrição')
     ano_letivo = models.ForeignKey(
         AnoLetivo, 
         on_delete=models.PROTECT

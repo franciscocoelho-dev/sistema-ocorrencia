@@ -13,6 +13,12 @@
             <div class="col-8">
                 {{form_turma.descricao.label}}
                 {{form_turma.descricao}}
+                <div class="text-danger">
+                    {% for erro in form_turma.descricao.errors %}
+                        {{erro}}
+                    {% endfor %}
+                </div>
+                
             </div>
             
             <div class="col-4">
