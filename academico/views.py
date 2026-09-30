@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Turma, Aluno
 from .forms import TurmaForm, AlunoForm
 
@@ -9,6 +9,7 @@ def listar_turma(request):
         'academico/turmas.html',
         {'context' : turmas}
     )
+
 
 def adicionar_turma(request):
     if request.method == 'GET':
@@ -25,6 +26,13 @@ def adicionar_turma(request):
     )
 
 
+def visualizar_turma(request, pk):
+    turma = get_object_or_404(Turma, pk = pk)
+    alunos = Aluno.objects.filter(turma = turma)
+
+    return render(request, 'academico/detalhe-turma.html', {'turma': turma, 'alunos': alunos})
+
+
 def listar_alunos(request):
     alunos = Aluno.objects.all()
     return render(
@@ -32,6 +40,7 @@ def listar_alunos(request):
         'academico/alunos.html',
         {'context': alunos}
     )
+
 
 def adicionar_alunos(request):
     if request.method == 'GET':

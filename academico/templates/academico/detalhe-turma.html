@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+
+{% block caminho1 %} Turmas {% endblock %}
+{% block caminho2 %} Detalhes {% endblock  %}
+{% block titulo %}   Visualizar Turma {% endblock %}
+
+
+{% block conteudo %}
+
+    <div class="row mb-3">
+        <div class="col-6">
+            <a href="" class="btn btn-primary">Atualizar Turma</a>
+            <a href="{% url "listar-turma" %}" class="btn btn-secondary">Voltar</a>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card table-card">
+                <div class="card-header">
+                    <h5>Dados da Turma</h5>
+                </div>
+                <div class="card-body py-3 px-0">
+                    <div class="table-responsive">
+                    <table class="table table-hover table-borderless mb-0">
+                        <tbody>
+                            <tr>
+                                <td>Nome: </td>
+                                <td>{{turma}}</td>
+                            </tr>       
+                            
+                            <tr>
+                                <td>Ano Letivo: </td>
+                                <td>{{turma.ano_letivo}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Data de Criação</td>
+                                <td>{{turma.created_at}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+        <div class="col-12">
+            <div class="card table-card">
+                <div class="card-header">
+                    <h5>Alunos da Turma</h5>
+                </div>
+                <div class="card-body py-3 px-0">
+                    <div class="table-responsive">
+                    <table class="table table-hover table-borderless mb-0">
+                        <tbody>
+                            {% for aluno in alunos %}
+                                <tr>
+                                    <td> {{aluno.nome}} </td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td> Não existe alunos cadastrados </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+{% endblock %}

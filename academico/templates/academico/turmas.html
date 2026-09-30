@@ -28,7 +28,9 @@
                             <td class="text-center"> {{turma.id}} </td>
                             <td> {{turma.descricao}} </td>
                             <td class="text-center"> {{turma.ano_letivo}} </td>
-                            <td class="text-center"> <button class="btn btn-sm btn-primary">Visualizar</button> </td>
+                            <td class="text-center">
+                                <a class="btn btn-sm btn-primary" href="{% url "visualizar-turma" turma.pk %}">Visualizar</a>
+                            </td>
                         </tr>
                     {% endfor %}
                 {% else %}
