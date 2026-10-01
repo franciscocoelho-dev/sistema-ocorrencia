@@ -59,7 +59,11 @@
                         <tbody>
                             {% for aluno in alunos %}
                                 <tr>
-                                    <td> {{aluno.nome}} </td>
+                                    <td> Nome: {{aluno.nome}} </td>
+                                    <td> RA: {{aluno.ra}} </td>
+                                    <td>
+                                        <a href="" class="btn btn-primary">Visualizar Detalhes</a>
+                                    </td>
                                 </tr>
                             {% empty %}
                                 <tr>

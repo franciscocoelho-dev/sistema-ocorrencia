@@ -37,3 +37,23 @@ class Aluno(models.Model):
 
     def __str__(self) -> str:
         return self.nome
+
+
+class Ocorrencia(models.Model):
+    GRAVIDADE_CHOICES = (
+        ('L', 'Leve'),
+        ('M', 'Moderada'),
+        ('G', 'Grave'),
+    )
+
+    id = models.AutoField(primary_key=True)
+    descricao = models.TextField()
+    gravidade = models.CharField(max_length=1, choices=GRAVIDADE_CHOICES, default='L')
+    aluno = models.ManyToManyField(Aluno, related_name='ocorrencias')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self) -> str:
+        return self.descricao
+
+

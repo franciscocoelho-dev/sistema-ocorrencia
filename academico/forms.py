@@ -1,7 +1,7 @@
 
 from django import forms
 from django.forms import ModelForm
-from .models import Turma, Aluno
+from .models import Turma, Aluno, Ocorrencia
 
 class TurmaForm(ModelForm):
     class Meta:
@@ -33,6 +33,10 @@ class AlunoForm(ModelForm):
         }
 
     
+class OcorrenciaForm(ModelForm):
+    class Meta:
+        model = Ocorrencia
+        fields = '__all__'
 
-
+    
 

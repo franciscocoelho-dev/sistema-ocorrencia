@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Turma, Aluno
-from .forms import TurmaForm, AlunoForm
+from .models import Turma, Aluno, Ocorrencia
+from .forms import TurmaForm, AlunoForm, OcorrenciaForm
 
 def listar_turma(request):
     turmas = Turma.objects.all()
@@ -53,3 +53,17 @@ def adicionar_alunos(request):
             form.save()
         return redirect(listar_alunos)
 
+
+def listar_ocorrencia(request):
+    ocorrencias = Ocorrencia.objects.all()
+    return render(request, 'academico/ocorrencias.html', {'ocorrencias': ocorrencias})
+
+def adicionar_ocorrencia(request):
+    if request.method == 'POST':
+        form = OcorrenciaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(listar_ocorrencia)
+    else:
+        form = OcorrenciaForm()
+    return render(request, 'academico/add-ocorrencia.html', {'form': form})
